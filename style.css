@@ -1,0 +1,81 @@
+/* Style for the static menu bar */
+.menu-bar {
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* 20px from the bottom */
+  left: 50%; /* Move to the center */
+  transform: translateX(-50%); /* Move to the center */
+  width: 100%; /* Full width for desktop */
+  height: 60px; /* Height of the menu bar */
+  background-color: white; /* Background colour */ 
+  color: black; /* Text colour */
+  display: flex; /* Align horizontally */
+  justify-content: space-around; /* Align horizontally */
+  align-items: center; /* Align vertically */
+  border-radius: 30px; /* Makes the menu bar round */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Adds a shadow */
+}
+
+/* Style for the home and settings icons */
+.menu-icon { /* the name for the home and settings icons (REMEMBER THIS LATER!!!) */
+  font-size: 24px; /* The font size */
+}
+
+/* Style for the start and high scores buttons */
+.button {
+  background-color: #4caf50; /* the background colour */ 
+  border: none; /* removes the border */
+  color: white; /* the text colour */
+  padding: 15px 32px; /* adds a padding of 15px on the top and bottom, and 32px on the left and right */
+  text-align: center; /* aligns the text to the center */
+  text-decoration: none; /* removes the underline */
+  display: inline-block; /* makes the button inline */ 
+  font-size: 16px; /* the font size */
+  margin: 4px 2px; /* adds a margin of 4px on the top and bottom, and 2px on the left and right */
+  border-radius: 50px; /* makes the button round */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* adds a shadow */
+  transition: transform 0.2s, box-shadow 0.2s; /* the transition effect */
+}
+
+/* the style for the start button */
+.start-button { /* the  name for the start button (REMEMBER THIS LATER!!!) */
+  background-color: #4caf50; /* the background colour for the start button lmao */
+}
+
+/* the style for the high scores button */
+.high-scores-button {
+  background-color: #f44336;
+}
+
+/* Add hover effect */
+.button:hover {
+  transform: translate(0, -4px); /* Move up by 4px on hover */
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.35); /* Increase shadow on hover */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {  /* If the device's width is less than 768px (suited for mobile devices */
+  .menu-bar {  /* Adjust menu bar width for mobile */
+    width: 70%; /* 70% of the device's width for mobile */
+  }
+}
+
+/* Style for the "Welcome to the Quiz App" text */
+.quiz-app-homescreen {
+  display: flex; /* Align horizontally */
+  flex-direction: column; /* Align vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Full height of the device */
+}
+
+.quiz-app-homescreen h1 { /* Style for the "Welcome to the Quiz App" text */
+  font-family: 'Open Sans', sans-serif; /* Font family */
+  text-align: center; /* Align text to the center */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); /* Adds a shadow */
+  margin-top: -20px; /* Move up by 20px to adjust from the center */
+}
+
+/* Adjust margin-top for buttons */
+.quiz-app-homescreen .button { /* the name for the start and high scores buttons (REMEMBER THIS LATER!!!) */
+  margin-top: 5px; /* Move 5px below the middle of the website */
+}
