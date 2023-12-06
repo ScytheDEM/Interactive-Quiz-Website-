@@ -3,37 +3,25 @@
   <head>
     <title>Multiple Choice Game</title>
     <link rel="stylesheet" type="text/css" href="start-quiz.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, viewport-fit=cover" />
   </head>
   <body>
     <div class="background">
+      <div class="stopwatch" id="stopwatch"></div>
       <div class="content">
         <div class="question-box">
-          <h2 class="question">What is the capital of France?</h2>
+          <h2 class="question">Loading Question...</h2>
         </div>
         <div class="countdown" id="countdown">3</div>
         <div class="game hidden" id="game">
-          <div class="options">
-            <button class="option" onclick="checkAnswer(this)">Paris</button>
-            <button class="option" onclick="checkAnswer(this)">London</button>
-            <button class="option" onclick="checkAnswer(this)">Berlin</button>
-            <button class="option" onclick="checkAnswer(this)">Madrid</button>
-          </div>
-          <div class="result-icons">
-            <div id="circle" class="circle hidden">
-              <div id="tick" class="tick hidden">
-                <img src="tick.svg" alt="tick" />
-              </div>
-              <div id="cross" class="cross hidden">
-                <img src="cross.svg" alt="cross" />
-
-                <a href="index.html" class="back-button">Back</a>
-              </div>
-            </div>
+          <div class="options"></div>
+          <div id="resultContainer" class="result-container hidden">
+            <div id="resultText" class="result-text"></div>
           </div>
         </div>
       </div>
     </div>
+    <a href="index.html" class="back-button">Back</a>
     <script src="start-quiz.js"></script>
   </body>
 </html>

@@ -7,6 +7,33 @@
   --particle-animation-delay: -0.2s;
 }
 
+body {
+  /* Disable user zooming */
+  touch-action: manipulation;
+  user-select: none;
+  user-drag: none;
+  zoom: reset;
+  -moz-user-select: none;
+  -moz-user-zoom: fixed;
+  -ms-user-select: none;
+  -ms-content-zooming: none;
+  -ms-touch-action: manipulation;
+  -ms-touch-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  /* Prevent double tap zoom on iOS */
+  touch-action-delay: none;
+  touch-action: manipulation;
+}
+
+body {
+  overflow: hidden;
+}
+
+
 /* Style for the static menu bar */
 .menu-bar {
   position: fixed;
@@ -101,8 +128,8 @@
 /* Style for the water wave animation */
 .water-wave {
   position: absolute; /* Set the position of the water wave to absolute */
-  top: 40px; /* Set the distance from the top of the page to 40px */
-  left: -1%; /* Set the distance from the left of the page to -5% */
+  top: 60px; /* Set the distance from the top of the page to 40px */
+  left: 1%; /* Set the distance from the left of the page to -5% */
   width: 60%; /* Set the width of the water wave to 60% */
   height: -5%; /* Set the height of the water wave to -5% */
   display: flex; /* Use flexbox to display the wave */
@@ -110,7 +137,7 @@
   justify-content: center; /* Center the wave horizontally */
   font-family: 'Open Sans', sans-serif; /* Set the font family of the wave */
   background-color: #007AFF; /* iOS-like blue color */
-  border-radius: 5px; /* Slight border radius */
+  border-radius: 1px; /* Slight border radius */
 
 }
 
@@ -120,7 +147,7 @@
 
 .content h2 {
   color: #007AFF; /* Set the color of the text to gray */
-  font-size: 5.5em; /* Set the font size of the text to 5em */
+  font-size: 5em; /* Set the font size of the text to 5em */
   position: absolute; /* Set the position of the text to absolute */
   transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
 }
