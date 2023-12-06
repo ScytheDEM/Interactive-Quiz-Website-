@@ -1,0 +1,217 @@
+/* Style for the static menu bar */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.menu-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  background-color: #f8f8f8; /* Light background color */
+  color: #333; /* Text color */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+/* Style for the home and settings icons */
+.menu-icon {
+  font-size: 24px;
+  color: #007aff; /* iOS blue color */
+}
+
+/* Style for the start and high scores buttons */
+.button {
+  background-color: #007aff; /* iOS blue color */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 20px; /* Slightly rounded edges */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Add hover effect */
+.button:hover {
+  transform: translate(0, -4px); /* Move the button up by 4px on hover */
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.35); /* Add a larger box shadow on hover */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .menu-bar {
+    width: 70%; /* Set the width of the menu bar to 70% on mobile devices */
+  }
+}
+
+/* Style for the "Welcome to the Quiz App" text */
+.quiz-app-homescreen {
+  display: flex; /* Use flexbox to display the text */
+  flex-direction: column; /* Set the direction of the flexbox to column */
+  align-items: center; /* Center the text horizontally */
+  justify-content: center; /* Center the text vertically */
+  height: 100vh; /* Set the height of the text to 100% of the viewport height */
+}
+
+.quiz-app-homescreen h1 {
+  font-family: 'Open Sans', sans-serif; /* Set the font family of the text */
+  text-align: center; /* Center the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); /* Add a text shadow to the text */
+  margin-top: -20px; /* Set the margin of the text */
+}
+
+/* Adjust margin-top for buttons */
+.quiz-app-homescreen .button {
+  margin-top: 5px; /* Set the margin of the buttons */
+}
+
+/* Style for the water wave animation */
+.water-wave {
+  position: absolute; /* Set the position of the water wave to absolute */
+  top: 40px; /* Set the distance from the top of the page to 40px */
+  left: 6%; /* Set the distance from the left of the page to -5% */
+  width: 60%; /* Set the width of the water wave to 60% */
+  height: -5%; /* Set the height of the water wave to -5% */
+  display: flex; /* Use flexbox to display the wave */
+  align-items: center; /* Center the wave vertically */
+  justify-content: center; /* Center the wave horizontally */
+  font-family: 'Open Sans', sans-serif; /* Set the font family of the wave */
+  background-color: #007AFF; /* iOS-like blue color */
+  border-radius: 5px; /* Slight border radius */
+
+}
+
+.content {
+  position: relative; /* Set the position of the content to relative */
+}
+
+.content h2 {
+  color: #007AFF; /* Set the color of the text to gray */
+  font-size: 4em; /* Set the font size of the text to 5em */
+  position: absolute; /* Set the position of the text to absolute */
+  transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+}
+
+
+.content h2:nth-child(2) {
+  color: black; /* Set the color of the second text element to purple */
+  animation: animate 4s ease-in-out infinite; /* Add an animation to the second text element */
+}
+
+
+  .tab-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #26d985;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .tab-menu button {
+    background-color: #444444;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+  }
+
+/* New style for the toggle switches */
+/* Updated style for the toggle switches */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align switches to the right */
+  position: fixed; /* Fixed positioning */
+  bottom: 500px; /* Move containers to the bottom */
+  right: 10%; /* Position from the right */
+  flex-direction: column; /* Arrange switches in a column */
+}
+
+/* Set margin between toggle containers */
+/* Updated style for the toggle switches */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align switches to the right */
+  position: fixed; /* Fixed positioning */
+  bottom: 500px; /* Move containers to the bottom */
+  right: 10%; /* Position from the right */
+  flex-direction: column; /* Arrange switches in a column */
+}
+
+/* Set margin between toggle containers */
+.toggle-box1 {
+  margin-bottom: -200px; /* Adjust the margin for the first switch */
+}
+
+.toggle-box2 {
+  margin-bottom: -100px; /* Adjust the margin for the second switch */
+}
+
+.toggle-box3 {
+  margin-bottom: 0px; /* Adjust the margin for the third switch */
+}
+
+.toggle-box4 {
+  margin-bottom: 100px; /* Adjust the margin for the fourth switch */
+}
+
+.toggle-label {
+  margin-right: 10px; /* Space between label and toggle */
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  cursor: pointer;
+  width: 60px;
+  height: 34px;
+  background-color: #eee; /* Lighter background */
+  border-radius: 34px;
+  margin-right: 10px; /* Margin between switches */
+  transition: background-color 0.4s, box-shadow 0.4s; /* Smooth transitions */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Added subtle shadow */
+}
+
+.slider:before {
+  content: "";
+  height: 26px;
+  width: 26px;
+  background-color: #fff; /* White circle */
+  border-radius: 50%;
+  transition: transform 0.4s ease; /* Smooth transform */
+  display: block;
+}
+
+input:checked + .slider {
+  background-color: #26d985; /* Toggle color */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}

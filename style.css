@@ -1,28 +1,38 @@
+:root {
+  --button-padding: 2.5vw;
+  --button-margin: 1vw;
+  --button-font-size: 1.5vw;
+  --button-border-radius: 5vw;
+  --particle-size: 1vw;
+  --particle-animation-delay: -0.2s;
+}
+
 /* Style for the static menu bar */
 .menu-bar {
-  position: fixed; /* Set the position of the menu bar to fixed */
-  bottom: 20px; /* Set the distance from the bottom of the page to 20px */
-  left: 50%; /* Set the distance from the left of the page to 50% */
-  transform: translateX(-50%); /* Center the menu bar horizontally */
-  width: 100%; /* Set the width of the menu bar to 100% */
-  height: 60px; /* Set the height of the menu bar to 60px */
-  background-color: white; /* Set the background color of the menu bar to white */
-  color: black; /* Set the text color of the menu bar to black */
-  display: flex; /* Use flexbox to display the menu items */
-  justify-content: space-around; /* Space the menu items evenly */
-  align-items: center; /* Center the menu items vertically */
-  border-radius: 30px; /* Set the border radius of the menu bar to 30px */
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Add a box shadow to the menu bar */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  background-color: #f8f8f8; /* Light background color */
+  color: #333; /* Text color */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
 }
 
 /* Style for the home and settings icons */
 .menu-icon {
-  font-size: 24px; /* Set the font size of the menu icons to 24px */
+  font-size: 24px;
+  color: #007aff; /* iOS blue color */
 }
 
 /* Style for the start and high scores buttons */
 .button {
-  background-color: #4caf50; /* Set the background color of the buttons to green */
+  background-color: darkgray; /* Set the background color of the buttons to green */
   border: none; /* Remove the border from the buttons */
   color: white; /* Set the text color of the buttons to white */
   padding: 15px 32px; /* Set the padding of the buttons */
@@ -34,22 +44,30 @@
   border-radius: 50px; /* Set the border radius of the buttons to 50px */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Add a box shadow to the buttons */
   transition: transform 0.2s, box-shadow 0.2s; /* Add a transition effect to the buttons */
+  background-color: #007AFF;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Style for the start button */
 .start-button {
-  background-color: #4caf50; /* Set the background color of the start button to green */
+  background-color: #007AFF;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Style for the high scores button */
 .high-scores-button {
-  background-color: #f44336; /* Set the background color of the high scores button to red */
+  background-color: #007AFF; /* Set the background color of the high scores button to red */
 }
 
 /* Add hover effect */
 .button:hover {
   transform: translate(0, -4px); /* Move the button up by 4px on hover */
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.35); /* Add a larger box shadow on hover */
+  background-color: #0056b3;
 }
 
 /* Media query for mobile devices */
@@ -84,13 +102,16 @@
 .water-wave {
   position: absolute; /* Set the position of the water wave to absolute */
   top: 40px; /* Set the distance from the top of the page to 40px */
-  left: -5%; /* Set the distance from the left of the page to -5% */
+  left: -1%; /* Set the distance from the left of the page to -5% */
   width: 60%; /* Set the width of the water wave to 60% */
   height: -5%; /* Set the height of the water wave to -5% */
   display: flex; /* Use flexbox to display the wave */
   align-items: center; /* Center the wave vertically */
   justify-content: center; /* Center the wave horizontally */
   font-family: 'Open Sans', sans-serif; /* Set the font family of the wave */
+  background-color: #007AFF; /* iOS-like blue color */
+  border-radius: 5px; /* Slight border radius */
+
 }
 
 .content {
@@ -98,51 +119,16 @@
 }
 
 .content h2 {
-  color: gray; /* Set the color of the text to gray */
-  font-size: 5em; /* Set the font size of the text to 5em */
+  color: #007AFF; /* Set the color of the text to gray */
+  font-size: 5.5em; /* Set the font size of the text to 5em */
   position: absolute; /* Set the position of the text to absolute */
   transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
 }
 
-.content h2:nth-child(1) {
-  color: transparent; /* Set the color of the first text element to transparent */
-  -webkit-text-stroke: 2px black; /* Add a black stroke to the first text element */
-}
 
 .content h2:nth-child(2) {
-  color: purple; /* Set the color of the second text element to purple */
+  color: black; /* Set the color of the second text element to purple */
   animation: animate 4s ease-in-out infinite; /* Add an animation to the second text element */
-}
-
-@keyframes animate {
-  0%,
-  100% {
-    clip-path: polygon(
-      0% 45%,
-      16% 44%,
-      33% 50%,
-      54% 60%,
-      70% 61%,
-      84% 59%,
-      100% 52%,
-      100% 100%,
-      0% 100%
-    ); /* Set the clip path of the animation */
-  }
-
-  50% {
-    clip-path: polygon(
-      0% 60%,
-      15% 65%,
-      34% 66%,
-      51% 62%,
-      67% 50%,
-      84% 45%,
-      100% 46%,
-      100% 100%,
-      0% 100%
-    ); /* Set the clip path of the animation */
-  }
 }
 
 /* Set the background color of the body */
@@ -978,4 +964,56 @@ body {
       -webkit-transform: translate3d(19vw, 51vh, 45px);
               transform: translate3d(19vw, 51vh, 45px);
     }
+  }
+  .tab-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #26d985;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .tab-menu button {
+    background-color: #444444;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+  }
+  .tab-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #26d985;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s ease-in-out; /* added transition */
+  }
+  .tab-menu button {
+    background-color: #444444;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+  }
+
+  .settings-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998;
+    background-color: #fff;
+    display: none;
+    transition: all 0.5s ease-in-out; /* added transition */
+  }
+
+  .settings-page.active {
+    display: block;
+    transform: translateX(100%); /* added transform */
   }
