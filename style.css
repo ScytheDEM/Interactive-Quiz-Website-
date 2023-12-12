@@ -17,6 +17,9 @@ body {
   overflow: hidden;
 }
 
+.language-selector {
+  margin-top: 70px; /* Adjust this value to move the language selector down */
+}
 
 /* Style for the static menu bar */
 .menu-bar {
