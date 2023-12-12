@@ -8,6 +8,18 @@
   body {
     overflow: hidden;
   }
+
+/* Styles for excluding red and green colors */
+.exclude-red-green .background {
+  background: linear-gradient(-45deg, #333, #666);
+  /* Update other elements as needed */
+}
+
+.exclude-red-green .back-button {
+  background-color: #333 !important;
+  /* Update other styles as needed */
+}
+/* Other styles for exclusion */
   
   /* Body styles */
   body {
@@ -102,7 +114,7 @@
   
   .option {
     padding: 4vw 10vw; /* Responsive padding based on viewport width */
-    font-size: 4vw; /* Responsive font size based on viewport width */
+    font-size: 1px; /* Adjust this value to decrease the font size */
     border: none;
     border-radius: 3vw; /* Responsive border radius based on viewport width */
     background-color: #3498db;
@@ -112,6 +124,11 @@
     cursor: pointer;
     box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.3); /* Responsive box shadow based on viewport width */
     transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  #optionsContainer .option {
+    /* Your existing styles */
+    font-size: 12px; /* Adjust this value to set the font size for the options */
   }
   
   .option:hover {
@@ -172,7 +189,7 @@
   
   /* Question styles */
   .question {
-    font-size: 6vw; /* Responsive font size based on viewport width */
+    font-size: 4vw; /* Responsive font size based on viewport width */
     text-align: center;
     margin: 0;
   }
@@ -271,4 +288,37 @@
     color: black;
     text-align: center;
     font-size: 24px;
+  }
+
+  .translate-box select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .translate-box {
+    position: fixed;
+    bottom: 100px;
+    right: 42%;
+  
+  .translate-box button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .translate-box button:hover {
+    background-color: #2980b9;
   }

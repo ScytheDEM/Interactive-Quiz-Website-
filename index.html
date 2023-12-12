@@ -1,16 +1,40 @@
 <!DOCTYPE html>
+<!-- Defines the document type as HTML -->
 <html>
+  <!-- Root element of the HTML document -->
   <head>
+    <!-- Contains metadata and external resources -->
     <title>Quiz App</title>
+    <!-- Sets the title of the document -->
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Links an external CSS file -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <!-- Links an external font stylesheet -->
     <meta name="viewport" content="width=device-width, viewport-fit=cover" />
+    <!-- Sets the viewport for responsive design -->
   </head>
   <body>
+    <!-- Contains the visible content of the document -->
+    <!-- Language selector dropdown -->
+    <div class="language-selector">
+      <!-- Container for the language selector dropdown -->
+      <label for="language-select">Select Language:</label>
+      <!-- Label for the dropdown -->
+      <select id="language-select" onchange="changeLanguage(this.value)">
+        <!-- Dropdown for selecting language -->
+        <option value="en">English</option>
+        <!-- Option for English language -->
+        <option value="es">Spanish</option>
+        <!-- Option for Spanish language -->
+        <!-- Add more language options -->
+      </select>
+    </div>
+
     <div id="particle-container">
+      <!-- Container for particles -->
       <div class="particle"></div>
       <div class="particle"></div>
       <div class="particle"></div>
@@ -44,18 +68,40 @@
       <div class="particle"></div>
     </div>
 
-    <!-- Content for the quiz app home screen -->
     <div class="quiz-app-homescreen">
-      <h1>Welcome to the Quiz App</h1>
-      <!-- Heading -->
-      <a href="start-quiz.html" class="button start-button">Start</a>
-      <!-- Link/button to start the quiz -->
-      <button class="button high-scores-button">High Scores</button>
-      <!-- Button for high scores -->
+      <!-- Container for quiz app content -->
+      <!-- Quiz app content -->
+      <h1 id="title-en">Welcome to the Quiz App</h1>
+      <!-- Heading for English language -->
+      <h1 id="title-es" style="display: none">
+        Bienvenido a la Aplicación de Preguntas
+      </h1>
+      <!-- Heading for Spanish language -->
+      <a href="start-quiz.html" id="start-button-en" class="button start-button"
+        >Start</a
+      >
+      <!-- Start button for English language -->
+      <a
+        href="start-quiz.html"
+        id="start-button-es"
+        class="button start-button"
+        style="display: none"
+        >Comenzar</a
+      >
+      <!-- Start button for Spanish language -->
+      <button
+        id="high-scores-button-es"
+        class="button high-scores-button"
+        style="display: none"
+      >
+        Puntuaciones Altas
+      </button>
+      <!-- High scores button for Spanish language -->
     </div>
 
     <div class="menu-bar">
-      <!-- Container for the menu bar icons -->
+      <!-- Container for menu bar icons -->
+      <!-- Menu bar icons -->
       <i class="material-icons menu-icon">home</i>
       <!-- Home icon -->
       <i
@@ -63,24 +109,26 @@
         onclick="window.location.href='settingspage.html'"
         >settings</i
       >
-      <!-- Settings icon with onclick functionality -->
+      <!-- Settings icon with onclick event -->
     </div>
 
-    <section class="water-wave">
-      <!-- Section with a water wave effect -->
+    <section class="water-wave" id="background">
+      <!-- Container for water wave effect -->
+      <!-- Water wave effect -->
       <div class="content">
+        <!-- Content within the water wave effect -->
         <h2>Home</h2>
-        <!-- Heading -->
+        <!-- Heading within the water wave effect -->
         <h2>Home</h2>
-        <!-- Heading (repeated) -->
+        <!-- Heading within the water wave effect -->
       </div>
     </section>
 
+    <!-- JavaScript files -->
     <script src="js.js"></script>
     <!-- Links an external JavaScript file -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Links jQuery library -->
+    <!-- Links an external jQuery library -->
   </body>
-  <!-- Closes the body tag -->
+  <!-- Closing body tag -->
 </html>
-<!-- Closes the HTML document -->
